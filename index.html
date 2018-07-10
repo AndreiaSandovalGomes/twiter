@@ -2,10 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Twiter0.2</title>
+    <title>Twiter0.3</title>
     <link rel="stylesheet" href="style.css">
   </head>
-  <body>
+  <body onload="time()">
     <header>
       <img class="img logo" src="img/Twitter logo.png"width="300px height 150px">
     </header>
@@ -17,11 +17,12 @@
       </section>
       <form class="myForm">
         <img class="img yourfoto" src="img/minhafoto.jpg" width="100px" height="100px">
-        <input type="text" class="text" onkeydown="myFunction()" onkeyup="limiteInput(this.value)">
+        <input type="text" class="text" onkeydown="myFunction()"  onkeyup="limiteInput(this.value)">
         <input type="submit" id="buttonid" value="twitar" disabled="disabled"></br>
-        <span id="cont">140</span><br>
+        <div id="cont"<span style="color: white">140</span></div>
       </form>
       <div class="newText">
+        <p id="txt"></p>
       </div>
     <script type="text/javascript" src="app.js">
     </script>

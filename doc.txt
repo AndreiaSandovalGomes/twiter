@@ -1,3 +1,5 @@
 VERSÃO 0.0.2
-- Não inserir texto vazio (desativar o botão "twittar").
-- Conte o número de caracteres de forma regressiva.
+Se você passar os 140 caracteres, desative o botão.
+Se você passar os 120 caracteres, mostre o contador com outra cor.
+Se você passar os 130 caracteres, mostre o contador com outra cor.
+Se você passar os 140 caracteres, mostre o contador em negativo.
