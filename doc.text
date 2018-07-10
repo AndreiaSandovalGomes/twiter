@@ -1,0 +1,5 @@
+VERSÃO 0.0.1
+Crie um formulário que permita inserir um texto e um botão para "twittar".
+Adicione um evento de click ao botão ou de submit no formulário.
+No evento, obter o texto.
+Adicione o texto ao HTML.
