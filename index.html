@@ -5,7 +5,7 @@
     <title>Twiter0.3</title>
     <link rel="stylesheet" href="style.css">
   </head>
-  <body onload="time()">
+  <body>
     <header>
       <img class="img logo" src="img/Twitter logo.png"width="300px height 150px">
     </header>
@@ -15,16 +15,15 @@
         <h1>Luana tweet:</h1>
           <p>Olá!!! Está gostando do twiter?<p>
       </section>
-      <form class="myForm">
-        <img class="img yourfoto" src="img/minhafoto.jpg" width="100px" height="100px">
-        <input type="text" class="text" onkeydown="myFunction()"  onkeyup="limiteInput(this.value)">
-        <input type="submit" id="buttonid" value="twitar" disabled="disabled"></br>
+      <form id="myForm">
+        <img class="img yourfoto" src="img/minhafoto.jpg" width="50px" height="50px">
+        <textarea type="text" class="time()"id="msg" onkeydown="myFunction()" onkeypress="counter()" onblur="counter()"onkeyup="counter()" cols="50" rows="1"></textarea>
+        <input type="submit" id="buttonid" value="twitar" disabled="disabled">
         <div id="cont"<span style="color: white">140</span></div>
       </form>
       <div class="newText">
-        <p id="txt"></p>
       </div>
-    <script type="text/javascript" src="app.js">
+      <script type="text/javascript" src="app.js">
     </script>
   </body>
 </html>
