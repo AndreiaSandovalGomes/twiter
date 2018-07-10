@@ -42,14 +42,13 @@ header{
 
 #buttonid{
   position: absolute;
-  top: 80%
-  right: 50%;
+  top: 70%;
+  right: 0px;
   width: 60px;
   height:40px;
   border-radius: 15px;
   background-color: #1DA1F2;
 }
-
 #cont{
   display: flex;
   text-align: center;
@@ -61,24 +60,22 @@ header{
   height: 40px;
   border-radius: 100%;
 }
-
 .contYellow{
   color: yellow;
 }
-
 .contRed{
   color: red;
 }
-
 .newText{
   background-color: white;
   font-size: 30px;
 }
-
 .showTime{
   background-color: white;
 }
-
-p{
-margin-bottom: 10px;
+.novoP{
+border-bottom: 1px solid black;
+}
+#buttonid:disabled{
+background-color: gray;
 }

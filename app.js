@@ -1,20 +1,26 @@
-function myFunction() {
-document.getElementById("buttonid").disabled = false;
-var extraLine = document.getElementById("msg");
-while (extraLine.scrollHeight > extraLine.offsetHeight){
-        extraLine.rows += 1;
-}
-// if (extraLine.scrollHeight < extraLine.offsetHeight) {
-//              extraLine.rows -= 1;
-//                     }
-}
 
+var activeButton = document.getElementById("msg");
+activeButton.addEventListener("keydown", myFunction);
+function myFunction() {
+var active = document.getElementById("msg").value.length;
+if (active === 0 || active === "" || active > 140 || document.getElementById("msg").value.match(/^[ \t\n\r\f\v]+$/)){
+  document.getElementById("buttonid").disabled = true;
+  var extraLine = document.getElementById("msg");
+  while (extraLine.scrollHeight > extraLine.offsetHeight){
+    extraLine.rows += 1;}
+}else{
+  document.getElementById("buttonid").disabled = false;
+    var extraLine = document.getElementById("msg");
+    while (extraLine.scrollHeight > extraLine.offsetHeight){
+    extraLine.rows += 1;
+    }
+  }
+}
 document.getElementById("msg").addEventListener('keypress', function(event) {
-        if (event.keyCode == 13) {
-          document.myForm.msg.Submit();
-            // event.preventDefault();
-        }
-    });
+  if (event.keyCode == 13) {
+    document.myForm.msg.Submit();
+  }
+});
 function counter() {
   var quant = 140;
   var actual = document.getElementById("msg").value.length;
@@ -24,12 +30,11 @@ function counter() {
     cont.style = "background-color: yellow";
   }else if(valor < 10 && valor >=0){
   cont.style = "background-color: red"
-}else if(valor < 0){
-  document.getElementById("buttonid").disabled = "disabled";
+  }else if(valor < 0){
+  document.getElementById("buttonid").disabled = true;
   cont.style = "background-color: red";
+  }
 }
-}
-
 var submit =
 document.querySelector("input[type=submit]");
 submit.onclick = function(event) {
@@ -40,59 +45,17 @@ submit.onclick = function(event) {
   newP.appendChild(newDiv);
   newDiv.textContent = time()+"h" + "  -  "  +  textarea.value;
   newText.appendChild(newP);
-
+  newP.setAttribute("class", "novoP");
   document.getElementById('myForm').reset();
+  document.getElementById('buttonid').disabled = true;
   return false;
-  event.preventDefault();
 }
-
-
-
-
-// var submit =
-// document.querySelector("input[type=submit]");
-// submit.onclick = function(event) {
-//   var textarea = document.querySelector("textarea");
-//   var newText = document.getElementsByClassName("newText")[0];
-//   var newDiv = document.createElement ("div");
-//   newDiv.textContent = textarea.value;
-//   newText.appendChild(newDiv);
-//   time();
-//   document.getElementById('myForm').reset();
-//   return false;
-//   event.preventDefault();
-// }
-
 function time() {
   var today = new Date();
-  h=today.getHours();
-  m=today.getMinutes();
+  var h=today.getHours();
+  var m=today.getMinutes();
   var hora = h+":"+m;
+  if (h.value < 10) {"0"+h;
+}if(m.value < 10) {"0"+m}
   return hora;
-   // return document.getElementsByClassName("newText").innerHTML = hora;
-
-  // document.getElementsByClassName("showTime").appendChild(divTime);
-  // event.preventDefault();
 }
-
-// document.getElementsByClassName("buttonid").addEventListener('click', function() {
-//   var showTime = document.getElementsByClassName("showTime")[0];
-//     var divTime = document.createElement ("div");
-//     var today=new Date();
-//     h=today.getHours();
-//     m=today.getMinutes();
-//     var time = h+":"+m;
-//     showTime.appendChild(document.createTextNode(time));
-//     event.preventDefault();
-//   });
-
-// document.getElementByid("buttonid").addEventListener("onclick", function {
-// function time()
-// {
-// var today=new Date();
-// h=today.getHours();
-// m=today.getMinutes();
-// var time = h+":"+m;
-//
-// // setTimeout('time()',500);
-// }
