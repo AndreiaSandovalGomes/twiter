@@ -1,0 +1,3 @@
+VERSÃO 0.0.2
+- Não inserir texto vazio (desativar o botão "twittar").
+- Conte o número de caracteres de forma regressiva.

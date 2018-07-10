@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Twiter0.1</title>
+    <title>Twiter0.2</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -17,8 +17,9 @@
       </section>
       <form class="myForm">
         <img class="img yourfoto" src="img/minhafoto.jpg" width="100px" height="100px">
-        <input class="message"placeholder="Mensagem aqui">
-        <input class="button"type="submit" value="twittar">
+        <input type="text" class="text" onkeydown="myFunction()" onkeyup="limiteInput(this.value)">
+        <input type="submit" id="buttonid" value="twitar" disabled="disabled"></br>
+        <span id="cont">140</span><br>
       </form>
       <div class="newText">
       </div>
